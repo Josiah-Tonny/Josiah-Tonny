@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rentals - Briella Real Estate</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --color-primary: #FFE169;
+            --color-secondary: #F0B609;
+            --color-tertiary: #926C15;
+        }
+
+        .carousel-button {
+            background-color: var(--color-secondary);
+            padding: 0.5rem 1rem;
+            border-radius: 0.375rem;
+            color: white;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .carousel-button:hover {
+            background-color: var(--color-tertiary);
+        }
+
+        .property-card {
+            background-size: cover;
+            background-position: center;
+            color: white;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            border-radius: 0.375rem;
+        }
+
+        .quote {
+            background-color: var(--color-primary);
+            padding: 1.5rem;
+            border-radius: 0.375rem;
+            font-style: italic;
+        }
+
+        .swiper-container {
+            overflow: hidden;
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            background-color: var(--color-secondary);
+            padding: 0.5rem 1rem;
+            border-radius: 0.375rem;
+            color: white;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .swiper-button-next:hover,
+        .swiper-button-prev:hover {
+            background-color: var(--color-tertiary);
+        }
+
+        .menu-toggle {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+                background-color: var(--color-secondary);
+                color: white;
+                padding: 0.5rem;
+                border-radius: 0.375rem;
+                cursor: pointer;
+            }
+
+            .nav-menu {
+                display: none;
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .nav-menu ul {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .nav-menu ul li {
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body class="font-sans bg-gray-100">
+    <header class="bg-gray-800 text-white sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold flex items-center" style="color: var(--color-primary);">
+                    <img src="logo.png" alt="MUFLO PROPERTIES" class="h-24 w-auto mr-2" style="display: inline-block;"> BRIELLA HAVEN 
+                </div>
+                <nav class="hidden md:block">
+                    <ul class="flex space-x-6">
+                        <li><a href="Homepage.html" class="hover:text-gray-300 transition duration-300">Home</a></li>
+                        <li><a href="about.html" class="hover:text-gray-300 transition duration-300">About Us</a></li>
+                        <li><a href="Property Listings.html" class="hover:text-gray-300 transition duration-300">Listing</a></li>
+                        <li><a href="services.html" class="hover:text-gray-300 transition duration-300">Services</a></li>
+                        <li><a href="#contact-us" class="hover:text-gray-300 transition duration-300">Contact Us</a></li>
+                    </ul>
+                </nav>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-white focus:outline-none" aria-label="Toggle mobile menu">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-700">
+            <ul class="px-4 py-2">
+                <li><a href="index.html" class="block py-2 hover:text-gray-300 transition duration-300">Home</a></li>
+                <li><a href="about.html" class="block py-2 hover:text-gray-300 transition duration-300">About Us</a></li>
+                <li><a href="listing.html" class="block py-2 hover:text-gray-300 transition duration-300">Listing</a></li>
+                <li><a href="services.html" class="block py-2 hover:text-gray-300 transition duration-300">Services</a></li>
+                <li><a href="contact.html" class="block py-2 hover:text-gray-300 transition duration-300">Contact Us</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="py-16">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl font-bold text-center mb-8" style="color: var(--color-tertiary);">Find Your Perfect Rental Home</h1>
+
+            <!-- Carousel -->
+            <div class="relative">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="property-card" style="background-image: url('images/apartment1.jpg');">
+                                <div>
+                                    <h2 class="text-3xl font-bold">Modern</h2>
+                                    <p class="text-xl">Downtown, CA</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="property-card" style="background-image: url('images/apartment2.jpg');">
+                                <div>
+                                    <h2 class="text-3xl font-bold">Luxury Penthouse</h2>
+                                    <p class="text-xl">Uptown, CA</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="property-card" style="background-image: url('images/apartment3.jpg');">
+                                <div>
+                                    <h2 class="text-3xl font-bold">Cozy Studio</h2>
+                                    <p class="text-xl">Midtown, CA</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
+
+                    <!-- Add Navigation -->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+
+            <!-- Property Cards -->
+            <div class="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <img src="images/apartment4.jpg" alt="Property Image" class="w-full h-48 object-cover rounded-lg">
+                    <h3 class="text-2xl font-bold mt-4">Urban Apartment</h3>
+                    <p class="text-gray-600">123 City St, Downtown, CA</p>
+                    <p class="mt-4">This urban apartment offers modern amenities and a prime location.</p>
+                    <a href="contact.html" class="carousel-button mt-4 inline-block">View Details</a>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <img src="images/apartment5.jpg" alt="Property Image" class="w-full h-48 object-cover rounded-lg">
+                    <h3 class="text-2xl font-bold mt-4">Elegant Flat</h3>
+                    <p class="text-gray-600">456 Suburb Ln, Suburbia, CA</p>
+                    <p class="mt-4">This elegant flat features a spacious interior and a great neighborhood.</p>
+                    <a href="contact.html" class="carousel-button mt-4 inline-block">View Details</a>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <img src="images/apartment6.jpg" alt="Property Image" class="w-full h-48 object-cover rounded-lg">
+                    <h3 class="text-2xl font-bold mt-4">Stylish Loft</h3>
+                    <p class="text-gray-600">789 Urban Dr, Metropolis, CA</p>
+                    <p class="mt-4">This stylish loft offers a unique living space in the heart of the city.</p>
+                    <a href="contact.html" class="carousel-button mt-4 inline-block">View Details</a>
+                </div>
+            </div>
+
+            <!-- Quote -->
+            <div class="mt-16 text-center">
+                <div class="quote">
+                    <p>"Home is where your story begins. Find the perfect rental to start your next chapter."</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+                <div>
+                    <h3 class="text-lg font-bold mb-4" style="color: var(--color-ffe169);">About Us</h3>
+                    <p class="text-gray-400">Briella Real Estate offers top-notch property listings and real estate services, ensuring you find your dream home or investment property.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4" style="color: var(--color-ffe169);">Contact Us</h3>
+                    <p class="text-gray-400">Kajiado County, Namanga Road</p>
+                    <p class="text-gray-400">Email: christophermuli99@gmail.com</p>
+                    <p class="text-gray-400">Phone:  +254 713431643</p>
+       
+                <div>
+                    <h3 class="text-lg font-bold mb-4" style="color: var(--color-ffe169);">Follow Us</h3>
+                    <div class="flex justify-center md:justify-start space-x-4 social-icons">
+                        <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M22.675 0h-21.35c-.733 0-1.325.592-1.325 1.325v21.351c0 .733.592 1.324 1.325 1.324h11.498v-9.294h-3.125v-3.621h3.125v-2.671c0-3.1 1.894-4.792 4.661-4.792 1.325 0 2.464.099 2.795.143v3.241l-1.918.001c-1.504 0-1.796.715-1.796 1.764v2.314h3.59l-.467 3.62h-3.124v9.294h6.125c.734 0 1.325-.591 1.325-1.324v-21.35c0-.733-.591-1.325-1.325-1.325z"></path>
+                            </svg>
+                        </a>
+                        <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.723-.951.565-2.005.974-3.127 1.195-.897-.956-2.178-1.555-3.594-1.555-2.72 0-4.928 2.208-4.928 4.928 0 .386.044.761.127 1.122-4.094-.205-7.725-2.167-10.156-5.144-.424.728-.666 1.574-.666 2.475 0 1.708.87 3.215 2.188 4.099-.807-.026-1.566-.247-2.228-.616v.062c0 2.386 1.697 4.374 3.946 4.827-.413.112-.849.172-1.296.172-.317 0-.626-.031-.928-.087.627 1.956 2.445 3.379 4.6 3.419-1.685 1.32-3.809 2.106-6.115 2.106-.398 0-.79-.023-1.175-.069 2.179 1.397 4.768 2.212 7.548 2.212 9.055 0 14.01-7.498 14.01-13.986 0-.213-.005-.425-.014-.636.962-.695 1.8-1.562 2.462-2.549z"></path>
+                            </svg>
+                        </a>
+                        <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.17.055 1.988.24 2.44.403a4.92 4.92 0 0 1 1.792 1.043 4.92 4.92 0 0 1 1.043 1.792c.164.452.348 1.27.403 2.44.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.055 1.17-.24 1.988-.403 2.44a4.92 4.92 0 0 1-1.043 1.792 4.92 4.92 0 0 1-1.792 1.043c-.452.164-1.27.348-2.44.403-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.17-.055-1.988-.24-2.44-.403a4.92 4.92 0 0 1-1.792-1.043 4.92 4.92 0 0 1-1.043-1.792c-.164-.452-.348-1.27-.403-2.44-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.055-1.17.24-1.988.403-2.44a4.92 4.92 0 0 1 1.043-1.792 4.92 4.92 0 0 1 1.792-1.043c.452-.164 1.27-.348 2.44-.403 1.266-.058 1.646-.07 4.85-.07zm0-2.163c-3.259 0-3.67.014-4.947.072-1.276.058-2.156.27-2.905.577a6.861 6.861 0 0 0-2.51 1.63 6.861 6.861 0 0 0-1.63 2.51c-.307.749-.519 1.629-.577 2.905-.058 1.277-.072 1.688-.072 4.947s.014 3.67.072 4.947c.058 1.276.27 2.156.577 2.905a6.861 6.861 0 0 0 1.63 2.51 6.861 6.861 0 0 0 2.51 1.63c.749.307 1.629.519 2.905.577 1.277.058 1.688.072 4.947.072s3.67-.014 4.947-.072c1.276-.058 2.156-.27 2.905-.577a6.861 6.861 0 0 0 2.51-1.63 6.861 6.861 0 0 0 1.63-2.51c.307-.749.519-1.629.577-2.905.058-1.277.072-1.688.072-4.947s-.014-3.67-.072-4.947c-.058-1.276-.27-2.156-.577-2.905a6.861 6.861 0 0 0-1.63-2.51 6.861 6.861 0 0 0-2.51-1.63c-.749-.307-1.629-.519-2.905-.577-1.277-.058-1.688-.072-4.947-.072zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a4.001 4.001 0 1 1 0-8.002 4.001 4.001 0 0 1 0 8.002zm6.406-11.845a1.44 1.44 0 1 0 0-2.88 1.44 1.44 0 0 0 0 2.88z"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 text-center text-gray-500 text-sm">
+                &copy; 2024 Briella Real Estate. All rights reserved.
+            </div>
+        </div>
+    </footer>
+    
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            spaceBetween: 30,
+            centeredSlides: true,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+
+        // JavaScript to handle menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function () {
+            var navMenu = document.getElementById('mobile-menu');
+            navMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+
+</html>

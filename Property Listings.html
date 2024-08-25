@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Listings - Briella Real Estate</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --color-ffe169: #FFE169;
+            --color-fad643: #FAD643;
+            --color-f0b609: #F0B609;
+            --color-c1910f: #C1910F;
+            --color-926c15: #926C15;
+        }
+
+        .social-icons a {
+            color: white;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: var(--color-f0b609);
+        }
+    </style>
+</head>
+
+<body class="font-sans">
+    <header class="bg-gray-800 text-white sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold flex items-center" style="color: var(--color-ffe169);">
+                    <img src="logo.png" alt="Briella Haven" class="h-24 w-auto mr-2" style="display: inline-block;"> BRIELLA HAVEN
+                </div>
+                <nav class="hidden md:block">
+                    <ul class="flex space-x-6">
+                        <li><a href="Homepage.html" class="hover:text-gray-300 transition duration-300">Home</a></li>
+                        <li><a href="about.html" class="hover:text-gray-300 transition duration-300">About Us</a></li>
+                        <li><a href="Property Listings.html" class="hover:text-gray-300 transition duration-300">Listing</a></li>
+                        <li><a href="services.html" class="hover:text-gray-300 transition duration-300">Services</a></li>
+                        <li><a href="#contact-us" class="hover:text-gray-300 transition duration-300">Contact Us</a></li>
+                    </ul>
+                </nav>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-white focus:outline-none" aria-label="Toggle mobile menu">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-700">
+            <ul class="px-4 py-2">
+                <li><a href="index.html" class="block py-2 hover:text-gray-300 transition duration-300">Home</a></li>
+                <li><a href="about.html" class="block py-2 hover:text-gray-300 transition duration-300">About Us</a></li>
+                <li><a href="listing.html" class="block py-2 hover:text-gray-300 transition duration-300">Listing</a></li>
+                <li><a href="services.html" class="block py-2 hover:text-gray-300 transition duration-300">Services</a></li>
+                <li><a href="contact.html" class="block py-2 hover:text-gray-300 transition duration-300">Contact Us</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-8 text-center" style="color: var(--color-926c15);">Property Listings</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Property Card 1 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="images/House 1.png" alt="Property 1" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Luxury Villa</h3>
+                        <p class="text-gray-600 mb-4">123 Ocean View Dr, Beachtown, CA</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold">KSH. 8.5M</span>
+                            <a href="property-details.html" class="text-white px-4 py-2 rounded hover:bg-blue-600 transition duration-300" style="background-color: var(--color-f0b609);">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Property Card 2 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="images/House 2.png" alt="Property 2" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Modern Apartment</h3>
+                        <p class="text-gray-600 mb-4">456 Cityscape Blvd, Urbania, NY</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold">KSH. 5.2M</span>
+                            <a href="property-details.html" class="text-white px-4 py-2 rounded hover:bg-blue-600 transition duration-300" style="background-color: var(--color-f0b609);">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Property Card 3 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="images/House 3.png" alt="Property 3" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Cozy Cottage</h3>
+                        <p class="text-gray-600 mb-4">789 Countryside Rd, Greendale, TX</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold">KSH. 3.8M</span>
+                            <a href="property-details.html" class="text-white px-4 py-2 rounded hover:bg-blue-600 transition duration-300" style="background-color: var(--color-f0b609);">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add more property cards as needed -->
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+                <div>
+                    <h3 class="text-lg font-bold mb-4" style="color: var(--color-ffe169);">About Us</h3>
+                    <p class="text-gray-400">Briella Real Estate offers top-notch property listings and real estate services, ensuring you find your dream home or investment property.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4" style="color: var(--color-ffe169);">Contact Us</h3>
+                    <p class="text-gray-400">Kajiado County, Namanga Road</p>
+                    <p class="text-gray-400">Email: christophermuli99@gmail.com</p>
+                    <p class="text-gray-400">Phone:  +254 713431643</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4" style="color: var(--color-ffe169);">Follow Us</h3>
+                    <div class="flex justify-center md:justify-start space-x-4 social-icons">
+                        <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M22.675 0h-21.35c-.733 0-1.325.592-1.325 1.325v21.351c0 .733.592 1.324 1.325 1.324h11.498v-9.294h-3.125v-3.621h3.125v-2.671c0-3.1 1.894-4.792 4.661-4.792 1.325 0 2.464.099 2.795.143v3.24l-1.918.001c-1.504 0-1.793.715-1.793 1.763v2.316h3.586l-.467 3.621h-3.12v9.293h6.116c.733 0 1.325-.591 1.325-1.324v-21.349c0-.733-.592-1.325-1.325-1.325z" />
+                            </svg>
+                        </a>
+                        <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 4.557c-.883.392-1.83.656-2.828.775 1.017-.611 1.798-1.574 2.165-2.723-.951.564-2.005.974-3.127 1.195-.897-.956-2.178-1.555-3.594-1.555-2.72 0-4.924 2.203-4.924 4.917 0 .39.043.765.127 1.124-4.094-.205-7.725-2.165-10.148-5.144-.425.729-.667 1.577-.667 2.475 0 1.71.87 3.213 2.188 4.096-.807-.026-1.566-.248-2.228-.616v.061c0 2.385 1.697 4.374 3.946 4.827-.413.111-.849.171-1.296.171-.317 0-.625-.031-.926-.089.631 1.956 2.445 3.379 4.604 3.419-1.684 1.32-3.809 2.107-6.114 2.107-.398 0-.79-.023-1.176-.068 2.181 1.399 4.768 2.213 7.548 2.213 9.054 0 14.009-7.502 14.009-14.009 0-.213-.004-.425-.014-.636.961-.693 1.796-1.56 2.457-2.548z" />
+                            </svg>
+                        </a>
+                        <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.17.056 1.796.24 2.218.414.55.214.947.47 1.366.888.417.418.673.816.888 1.366.174.422.358 1.048.414 2.218.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.056 1.17-.24 1.796-.414 2.218-.214.55-.47.947-.888 1.366-.418.417-.816.673-1.366.888-.422.174-1.048.358-2.218.414-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.17-.056-1.796-.24-2.218-.414-.55-.214-.947-.47-1.366-.888-.417-.418-.673-.816-.888-1.366-.174-.422-.358-1.048-.414-2.218-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.056-1.17.24-1.796.414-2.218.214-.55.47-.947.888-1.366.418-.417.816-.673 1.366-.888.422-.174 1.048-.358 2.218-.414 1.266-.058 1.646-.07 4.85-.07zm0-2.163c-3.259 0-3.67.014-4.947.072-1.277.059-2.153.256-2.908.545-.782.301-1.444.706-2.101 1.362-.656.657-1.061 1.319-1.362 2.101-.289.755-.486 1.631-.545 2.908-.058 1.277-.072 1.688-.072 4.947s.014 3.67.072 4.947c.059 1.277.256 2.153.545 2.908.301.782.706 1.444 1.362 2.101.657.656 1.319 1.061 2.101 1.362.755.289 1.631.486 2.908.545 1.277.058 1.688.072 4.947.072s3.67-.014 4.947-.072c1.277-.059 2.153-.256 2.908-.545.782-.301 1.444-.706 2.101-1.362.656-.657 1.061-1.319 1.362-2.101.289-.755.486-1.631.545-2.908.058-1.277.072-1.688.072-4.947s-.014-3.67-.072-4.947c-.059-1.277-.256-2.153-.545-2.908-.301-.782-.706-1.444-1.362-2.101-.657-.656-1.319-1.061-2.101-1.362-.755-.289-1.631-.486-2.908-.545-1.277-.058-1.688-.072-4.947-.072z" />
+                                <path d="M12 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.441s.645 1.441 1.441 1.441 1.441-.645 1.441-1.441-.645-1.441-1.441-1.441z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center text-gray-400 mt-8">
+                &copy; 2023 Briella Real Estate. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            var mobileMenu = document.getElementById('mobile-menu');
+            if (mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.remove('hidden');
+            } else {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+
+</html>
